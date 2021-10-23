@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+.loding{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.loding span{
+    width: 25px;
+    height: 25px;
+    background: #ff00d4;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(calc(var(--n)* 24deg));
+    transform-origin: 0 100px;
+    animation: animate_dot 1.5s ease-in infinite;
+    animation-delay: calc(var(--n)* 0.05s);
+}
+@keyframes  animate_dot{
+    0%, 50%{
+        background: #4d4c4c;
+    }
+    50.01%,100%{
+        background: #02e2d0;
+    }
+}
